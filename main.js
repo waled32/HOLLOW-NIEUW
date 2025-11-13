@@ -81,14 +81,16 @@ if (window.gsap) {
 }
 
 // hero image rotator
+// hero image rotator
 const heroImg = document.querySelector(".hero-img");
 const heroImages = [
-  "/static/images/hero-bg.jpg.png",
-  "/static/images/photo_2025-10-27_17-14-31.jpg",
-  "/static/images/photo_2025-10-27_17-15-25.jpg",
-  "/static/images/photo_2025-10-28_22-34-09.jpg",
-  "/static/images/thumb-1.jpg.jpg"
+  "images/hero-bg.jpg.png",
+  "images/photo_2025-10-27_17-14-31.jpg",
+  "images/photo_2025-10-27_17-15-25.jpg",
+  "images/photo_2025-10-28_22-34-09.jpg",
+  "images/thumb-1.jpg.jpg"
 ];
+
 let current = 0;
 
 function rotateHero() {
@@ -117,21 +119,21 @@ if (pfpCanvas && pfpCtx) {
   const PFP = {
     size: 420,
     bg: "#ffffff",
-    base: "/static/images/pfp/nobg.png",
+    base: "images/pfp/nobg.png",
     hat: null,
     // let multiple extras
     extrasSelected: [],
     hats: [
-      { id: "greyhat",  label: "Grey hat",  src: "/static/images/pfp/greyhat.png" },
-      { id: "whitehat", label: "White hat", src: "/static/images/pfp/whitehat.png" },
-      { id: "pinkhat",  label: "Pink hat",  src: "/static/images/pfp/pinkhat.png" },
-      { id: "redhat",   label: "Red hat",   src: "/static/images/pfp/redhat.png" },
-      { id: "bluehat",  label: "Blue hat",  src: "/static/images/pfp/bluehat.png" },
-      { id: "greenhat", label: "Green hat", src: "/static/images/pfp/greenhat.png" },
+      { id: "greyhat",  label: "Grey hat",  src: "images/pfp/greyhat.png" },
+      { id: "whitehat", label: "White hat", src: "images/pfp/whitehat.png" },
+      { id: "pinkhat",  label: "Pink hat",  src: "images/pfp/pinkhat.png" },
+      { id: "redhat",   label: "Red hat",   src: "images/pfp/redhat.png" },
+      { id: "bluehat",  label: "Blue hat",  src: "images/pfp/bluehat.png" },
+      { id: "greenhat", label: "Green hat", src: "images/pfp/greenhat.png" },
     ],
     extras: [
-      { id: "watch", label: "Watch", src: "/static/images/pfp/watch.png" },
-      { id: "chain", label: "Chain", src: "/static/images/pfp/chain.png" },
+      { id: "watch", label: "Watch", src: "images/pfp/watch.png" },
+      { id: "chain", label: "Chain", src: "images/pfp/chain.png" },
     ],
   };
 

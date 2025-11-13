@@ -29,7 +29,7 @@ body::after {
   content: "";
   position: fixed;
   inset: 0;
-  background: url("/static/images/thumb-2.jpg.jpg") no-repeat center/45%;
+  background: url("images/thumb-2.jpg.jpg") no-repeat center/45%;
   opacity: 0.018;
   pointer-events: none;
   z-index: -4;
