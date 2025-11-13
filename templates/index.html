@@ -1,0 +1,272 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>HOLLOW — still standing</title>
+  <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
+</head>
+<body>
+  <!-- particle canvas -->
+  <canvas id="hollow-particles"></canvas>
+  <!-- custom cursor -->
+  <div id="hollow-cursor"></div>
+
+  <header class="top-nav">
+    <div class="nav-inner">
+      <div class="brand">
+        <img src="{{ url_for('static', filename='images/hollow-icon.png') }}" alt="Hollow icon" class="brand-icon">
+        <span>HOLLOW</span>
+      </div>
+      <nav class="nav-links">
+        <a href="#about">About</a>
+        <a href="#gallery">Faces</a>
+        <a href="#vision">Message</a>
+        <a href="#prominent">Prominent Seets</a>
+        <a href="#pfp">PFP</a>
+        <a href="#faq">FAQ</a>
+      </nav>
+      <a href="#" class="btn-primary small">BUY $HOLLOW</a>
+    </div>
+  </header>
+
+  <main>
+    <!-- HERO -->
+    <section class="hero" id="top">
+      <div class="hero-content">
+        <p class="eyebrow">there is still something standing</p>
+        <h1>HOLLOW</h1>
+        <p class="hero-text">
+          He looks simple at first. Almost harmless. But the hollow in his chest is the space where everything once lived and then quietly died.
+          This is the place for those who keep walking anyway.
+        </p>
+        <div class="hero-actions">
+          <a href="#" class="btn-primary">BUY $HOLLOW</a>
+          <a href="#prominent" class="btn-ghost">COMMUNITY SIGNAL</a>
+        </div>
+        <div class="hero-meta">
+          <div>
+            <span class="label">CA</span>
+            <span class="value">coming soon...</span>
+          </div>
+          <div>
+            <span class="label">CHAIN</span>
+            <span class="value">SOL</span>
+          </div>
+        </div>
+      </div>
+      <div class="hero-media">
+        <div class="hero-card">
+          <img src="{{ url_for('static', filename='images/hero-bg.jpg.png') }}" alt="Hollow" class="hero-img">
+          <div class="hero-overlay">
+            <p>“I am still here, but I feel nothing anymore.”</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ABOUT -->
+    <section class="section" id="about">
+      <div class="section-inner two-col">
+        <div>
+          <h2>Who is Hollow?</h2>
+          <p>
+            Hollow doesn’t rage. He doesn’t cry. He’s long past that. What’s left is the quiet kind of survival — breathing out of habit more than hope.
+          </p>
+          <p>
+            The empty eyes and the gaping black hole in his chest show that this is not ordinary emptiness. He is what remains when feeling is gone,
+            when the world has taken everything and you keep walking anyway.
+          </p>
+        </div>
+        <div class="about-grid">
+          <div class="about-card">
+            <h3>Collective feeling</h3>
+            <p>“Change your pfp to Hollow as a sign we stand together.”</p>
+          </div>
+          <div class="about-card">
+            <h3>Symbol > mascot</h3>
+            <p>Not a funny guy. A mirror.</p>
+          </div>
+          <div class="about-card">
+            <h3>For the ones who stayed</h3>
+            <p>He exists because we know how Hollow feels.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- GALLERY -->
+    <section class="section gallery" id="gallery">
+      <div class="section-inner">
+        <h2>Faces of Hollow</h2>
+        <p>The same emptiness, different scenes.</p>
+        <div class="gallery-grid">
+          <img src="{{ url_for('static', filename='images/photo_2025-10-27_17-14-31.jpg') }}" alt="Hollow at night">
+          <img src="{{ url_for('static', filename='images/photo_2025-10-28_22-34-09.jpg') }}" alt="Hollow walking">
+          <img src="{{ url_for('static', filename='images/thumb-1.jpg.jpg') }}" alt="Hollow with money">
+          <img src="{{ url_for('static', filename='images/thumb-2.jpg.jpg') }}" alt="Hollow sitting tree">
+        </div>
+      </div>
+    </section>
+
+    <!-- VISION -->
+    <section class="section" id="vision">
+      <div class="section-inner">
+        <h2>The space where feeling died</h2>
+        <p>
+          This project isn’t about hype. It’s about recognition. A character that looks done, but refuses to disappear.
+          That’s why $HOLLOW exists — to give shape to that feeling and to let people signal it.
+        </p>
+        <div class="vision-cards">
+          <div class="vision-card">
+            <h3>Profile picture movement</h3>
+            <p>Use Hollow as your pfp to show “I’m still here.”</p>
+          </div>
+          <div class="vision-card">
+            <h3>Community-led signals</h3>
+            <p>We highlight your posts in Prominent Seets.</p>
+          </div>
+          <div class="vision-card">
+            <h3>Token utility (later)</h3>
+            <p>Placeholder for future utilities and expansions.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- PROMINENT -->
+    <section class="section prominent" id="prominent">
+      <div class="section-inner">
+        <div class="section-header-row">
+          <h2>Prominent Seets</h2>
+          <p>your signals, your hollowness, your posts</p>
+        </div>
+        <div class="marquee-container">
+          <div class="marquee-track" id="marquee-track">
+            <div class="marquee-item">
+              <img src="{{ url_for('static', filename='images/photo_2025-10-27_17-14-31.jpg') }}" alt="pfp" class="marquee-avatar">
+              <div class="marquee-body">
+                <h4>@emptystill</h4>
+                <p>“I am still here, but I feel nothing anymore.”</p>
+              </div>
+            </div>
+            <div class="marquee-item">
+              <img src="{{ url_for('static', filename='images/photo_2025-10-27_17-15-25.jpg') }}" alt="pfp" class="marquee-avatar">
+              <div class="marquee-body">
+                <h4>@hollowchain</h4>
+                <p>signal sent. hollowness recognized.</p>
+              </div>
+            </div>
+            <div class="marquee-item">
+              <img src="{{ url_for('static', filename='images/photo_2025-10-28_22-34-09.jpg') }}" alt="pfp" class="marquee-avatar">
+              <div class="marquee-body">
+                <h4>@stillbreathing</h4>
+                <p>breathing out of habit more than hope.</p>
+              </div>
+            </div>
+            <div class="marquee-item">
+              <img src="{{ url_for('static', filename='images/thumb-1.jpg.jpg') }}" alt="pfp" class="marquee-avatar">
+              <div class="marquee-body">
+                <h4>@togetherhollow</h4>
+                <p>change your pfp to Hollow.</p>
+              </div>
+            </div>
+            <div class="marquee-item">
+              <img src="{{ url_for('static', filename='images/59f1c6a1-a2f1-433a-b5d2-3ab33212d5e2.png') }}" alt="pfp" class="marquee-avatar">
+              <div class="marquee-body">
+                <h4>@numbcore</h4>
+                <p>the hole is not empty, it's where it used to hurt.</p>
+              </div>
+            </div>
+            <div class="marquee-item">
+              <img src="{{ url_for('static', filename='images/photo_2025-10-28_22-34-09.jpg') }}" alt="pfp" class="marquee-avatar">
+              <div class="marquee-body">
+                <h4>@hollowdev</h4>
+                <p>building for people who lost the spark.</p>
+              </div>
+            </div>
+            <div class="marquee-item">
+              <img src="{{ url_for('static', filename='images/photo_2025-10-27_17-14-31.jpg') }}" alt="pfp" class="marquee-avatar">
+              <div class="marquee-body">
+                <h4>@ghostslot</h4>
+                <p>still standing.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <p class="marquee-note">* jij kunt dit later hardcoden met echte tweets/seets *</p>
+      </div>
+    </section>
+
+    <!-- PFP GENERATOR -->
+    <section class="section" id="pfp">
+      <div class="section-inner pfp-wrapper">
+        <div>
+          <h2>Make your Hollow pfp</h2>
+          <p>Kies een background, een hat, en eventueel een extra. Download en zet ‘m als seet/pfp.</p>
+
+          <div class="pfp-control-group">
+            <h3>Background</h3>
+            <div class="pfp-bg-list" id="pfp-bg-list">
+              <button class="pfp-bg-btn" data-color="#ffffff"></button>
+              <button class="pfp-bg-btn" data-color="#ffe76b"></button>
+              <button class="pfp-bg-btn" data-color="#ffb3d1"></button>
+              <button class="pfp-bg-btn" data-color="#8dd5ff"></button>
+              <button class="pfp-bg-btn" data-color="#c7ff8d"></button>
+              <button class="pfp-bg-btn" data-color="transparent" title="transparent"></button>
+            </div>
+          </div>
+
+          <div class="pfp-control-group">
+            <h3>Hat</h3>
+            <div class="pfp-row" id="pfp-hat-list"></div>
+          </div>
+
+          <div class="pfp-control-group">
+            <h3>Extra</h3>
+            <div class="pfp-row" id="pfp-extra-list"></div>
+          </div>
+
+          <button class="btn-primary" id="pfp-download">Download PFP</button>
+        </div>
+
+        <div class="pfp-preview-card">
+          <canvas id="pfp-canvas" width="420" height="420"></canvas>
+          <p class="pfp-hint">Tip: 1:1 formaat — perfect voor pfps.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- FAQ -->
+    <section class="section" id="faq">
+      <div class="section-inner faq">
+        <h2>FAQ</h2>
+        <details>
+          <summary>Wat is HOLLOW?</summary>
+          <p>Een character + community signaal + token-layer voor mensen die zich herkennen in het “ik voel niks meer maar ik ben er nog.”</p>
+        </details>
+        <details>
+          <summary>Is dit een token?</summary>
+          <p>Ja, maar dit is een placeholder. Vul later je echte chain, CA en launch-info in.</p>
+        </details>
+        <details>
+          <summary>Mag ik Hollow als pfp gebruiken?</summary>
+          <p>Ja. Dat is letterlijk het punt.</p>
+        </details>
+        <details>
+          <summary>Waar komen de seets vandaan?</summary>
+          <p>Nu: dummy content. Later: door jou hardcoded of via een API.</p>
+        </details>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <p>HOLLOW — still standing. made by the ones who felt too much for too long.</p>
+  </footer>
+
+  <script src="{{ url_for('static', filename='main.js') }}"></script>
+</body>
+</html>
