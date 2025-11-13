@@ -84,7 +84,7 @@ if (window.gsap) {
 // hero image rotator
 const heroImg = document.querySelector(".hero-img");
 const heroImages = [
-  "images/hero-bg.jpg.png",
+  "images/hero-bg.png",
   "images/photo_2025-10-27_17-14-31.jpg",
   "images/photo_2025-10-27_17-15-25.jpg",
   "images/photo_2025-10-28_22-34-09.jpg",
